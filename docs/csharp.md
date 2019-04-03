@@ -28,6 +28,11 @@ public static IEnumerable<TSource> DistinctBy<TSource, TResult>(this  IEnumerabl
 }
 ```
 
+## LINQ Visualization
+
+![Screenshot](img/explain-linq-to-a-five-year-old.png)
+*[Image source](https://twitter.com/bewidec/status/935573858136051713)*
+
 ## Uninstall Program by Name
 
 ```C#
