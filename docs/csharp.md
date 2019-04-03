@@ -1,4 +1,4 @@
-# C Sharp
+# C&#35;
 
 ## DistinctBy Extension Method
 
