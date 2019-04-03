@@ -1,4 +1,8 @@
-site_name: https://toasty-toast.github.io/bag-of-tricks
+site_name: Bag of Tricks
+site_url: https://toasty-toast.github.io/bag-of-tricks
 markdown_extensions:
         - toc:
-                baselevel: 2
+                baselevel: 1
+        - codehilite
+theme:
+        name: 'material'
