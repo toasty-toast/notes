@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://toasty-toast.github.io/bag-of-tricks/">
+        <link rel="canonical" href="https://toasty-toast.github.io/bag-of-tricks/wpf/">
       
       
       
@@ -33,21 +33,21 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="assets/images/favicon.png">
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
     
     
       
-        <title>Bag of Tricks</title>
+        <title>WPF - Bag of Tricks</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/application.572ca0f0.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.572ca0f0.css">
       
       
     
     
-      <script src="assets/javascripts/modernizr.962652e9.js"></script>
+      <script src="../assets/javascripts/modernizr.962652e9.js"></script>
     
     
       
@@ -56,7 +56,7 @@
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
-    <link rel="stylesheet" href="assets/fonts/material-icons.css">
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
     
     
     
@@ -77,7 +77,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#index" tabindex="1" class="md-skip">
+      <a href="#wpf" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -103,7 +103,7 @@
                 Bag of Tricks
               </span>
               <span class="md-header-nav__topic">
-                Index
+                WPF
               </span>
             
           
@@ -172,6 +172,30 @@
       
       
 
+
+  <li class="md-nav__item">
+    <a href=".." title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../csharp/" title="C Sharp" class="md-nav__link">
+      C Sharp
+    </a>
+  </li>
+
+    
+      
+      
+      
+
   
 
 
@@ -182,34 +206,46 @@
       
     
     
-    <a href="." title="Index" class="md-nav__link md-nav__link--active">
-      Index
-    </a>
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        WPF
+      </label>
     
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="csharp/" title="C Sharp" class="md-nav__link">
-      C Sharp
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="wpf/" title="WPF" class="md-nav__link">
+    <a href="./" title="WPF" class="md-nav__link md-nav__link--active">
       WPF
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#filtering-a-collection-without-modifying-it" title="Filtering a Collection Without Modifying It" class="md-nav__link">
+    Filtering a Collection Without Modifying It
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#span-all-grid-rows-and-columns" title="Span All Grid Rows and Columns" class="md-nav__link">
+    Span All Grid Rows and Columns
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
     
@@ -230,6 +266,29 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#filtering-a-collection-without-modifying-it" title="Filtering a Collection Without Modifying It" class="md-nav__link">
+    Filtering a Collection Without Modifying It
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#span-all-grid-rows-and-columns" title="Span All Grid Rows and Columns" class="md-nav__link">
+    Span All Grid Rows and Columns
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -241,7 +300,29 @@
               
                 
                 
-                <h1 id="index">Index</h1>
+                <h1 id="wpf">WPF</h1>
+<h2 id="filtering-a-collection-without-modifying-it">Filtering a Collection Without Modifying It</h2>
+<div class="codehilite"><pre><span></span><span class="k">private</span> <span class="n">ObservableCollection</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">myBackingCollection</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ObservableCollection</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;();</span>
+<span class="k">public</span> <span class="n">ICollectionView</span> <span class="n">MyCollectionView</span>
+<span class="p">{</span>
+    <span class="k">get</span>
+    <span class="p">{</span>
+        <span class="n">ICollectionView</span> <span class="n">view</span> <span class="p">=</span> <span class="n">CollectionViewSource</span><span class="p">.</span><span class="n">GetDefaultView</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">myBackingColleciton</span><span class="p">);</span>
+        <span class="n">view</span><span class="p">.</span><span class="n">Filter</span> <span class="p">=</span> <span class="p">(</span><span class="n">obj</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="k">true</span><span class="p">;</span> <span class="c1">// Filter delegate</span>
+        <span class="k">return</span> <span class="n">view</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h2 id="span-all-grid-rows-and-columns">Span All Grid Rows and Columns</h2>
+<p>The following code shows how to make a control span all rows and/or columns of its parent grid, even if the number of rows and columns change.</p>
+<div class="codehilite"><pre><span></span><span class="nt">&lt;Grid&gt;</span>
+    <span class="c">&lt;!-- Other stuff in the grid --&gt;</span>
+    <span class="nt">&lt;ContentControl</span> <span class="na">Grid.RowSpan=</span><span class="s">&quot;{Binding RelativeSource={RelativeSource AncestorType=Grid},  Path=RowDefinitions.Count, Mode=OneWay}&quot;</span>
+                    <span class="na">Grid.ColumnSpan=</span><span class="s">&quot;{Binding RelativeSource={RelativeSource AncestorType=Grid},  Path=ColumnDefinitions.Count, Mode=OneWay}&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/Grid&gt;</span>
+</pre></div>
                 
                   
                 
@@ -262,20 +343,20 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-        
-          <a href="csharp/" title="C Sharp" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../csharp/" title="C Sharp" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
-                  Next
+                  Previous
                 </span>
                 C Sharp
               </span>
             </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
           </a>
+        
         
       </nav>
     </div>
@@ -299,9 +380,9 @@
       
     </div>
     
-      <script src="assets/javascripts/application.a353778b.js"></script>
+      <script src="../assets/javascripts/application.a353778b.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"."}})</script>
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
     
   </body>
