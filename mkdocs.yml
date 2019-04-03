@@ -1,0 +1,4 @@
+site_name: https://toasty-toast.github.io/bag-of-tricks
+markdown_extensions:
+        - toc:
+                baselevel: 2
