@@ -15,6 +15,37 @@ public ICollectionView MyCollectionView
 }
 ```
 
+## Remove Toolbar Grip and Overflow
+
+XAML
+```WPF
+<ToolBarPanel DockPanel.Dock="Top">
+    <ToolBar ToolBarTray.IsLocked="True" Loaded="ToolBar_Loaded">
+        <Menu ToolBar.OverflowMode="Never">
+            <!-- Menu items -->
+        </Menu>
+    </ToolBar>
+</ToolBarPanel>
+```
+
+Code behind
+```C#
+private void ToolBar_Loaded(object sender, RoutedEventArgs e)
+{
+    ToolBar toolBar = sender as ToolBar;
+    var overflowGrid = toolBar.Template.FindName("OverflowGrid", toolBar) as FrameworkElement;
+    if (overflowGrid != null)
+    {
+        overflowGrid.Visibility = Visibility.Collapsed;
+    }
+    var mainPanelBorder = toolBar.Template.FindName("MainPanelBorder", toolBar) as FrameworkElement;
+    if (mainPanelBorder != null)
+    {
+        mainPanelBorder.Margin = new Thickness();
+    }
+}
+```
+
 ## Span All Grid Rows and Columns
 
 The following code shows how to make a control span all rows and/or columns of its parent grid, even if the number of rows and columns change.
