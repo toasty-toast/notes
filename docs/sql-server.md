@@ -30,6 +30,15 @@ END
 GO
 ```
 
+## Get All Database Triggers
+
+```SQL
+SELECT TAB.name as TableName, TRIG.name as TriggerName, TRIG.is_disabled AS IsDisabled
+FROM sys.triggers AS TRIG
+INNER JOIN sys.tables AS TAB
+ON TRIG.parent_id = TAB.object_id
+```
+
 ## Insert or Update Row Using MERGE
 
 ```SQL
