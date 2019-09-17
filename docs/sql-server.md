@@ -22,7 +22,7 @@ IF EXISTS
 (
     SELECT 1
     FROM INFORMATION_SCHEMA.TABLES
-    WHERE TABLE_SCHEMA = '<schema>' AND TABLE_NAME = '<table>p'
+    WHERE TABLE_SCHEMA = '<schema>' AND TABLE_NAME = '<table>'
 )
 BEGIN
 	DROP TABLE [<schema>].[<table>]
