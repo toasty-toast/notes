@@ -1,5 +1,18 @@
 # SQL Server
 
+## Create Procedure
+
+```SQL
+CREATE PROCEDURE [schema].[procedure]
+    @arg INT,
+    @argWithDefault VARCHAR(10) = NULL
+AS
+BEGIN
+    -- Procedure body
+END
+GO
+```
+
 ## Drop Procedure if Exists
 
 ```SQL
