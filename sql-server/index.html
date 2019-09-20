@@ -194,6 +194,18 @@
       
       
 
+
+  <li class="md-nav__item">
+    <a href="../python/" title="Python" class="md-nav__link">
+      Python
+    </a>
+  </li>
+
+    
+      
+      
+      
+
   
 
 
@@ -221,6 +233,13 @@
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-procedure" class="md-nav__link">
+    Create Procedure
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#drop-procedure-if-exists" class="md-nav__link">
@@ -313,6 +332,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#create-procedure" class="md-nav__link">
+    Create Procedure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#drop-procedure-if-exists" class="md-nav__link">
     Drop Procedure if Exists
   </a>
@@ -365,6 +391,18 @@
                 
                 
                 <h1 id="sql-server">SQL Server</h1>
+<h2 id="create-procedure">Create Procedure</h2>
+<div class="codehilite"><pre><span></span><span class="k">CREATE</span> <span class="k">PROCEDURE</span> <span class="p">[</span><span class="k">schema</span><span class="p">].[</span><span class="k">procedure</span><span class="p">]</span>
+    <span class="o">@</span><span class="n">arg</span> <span class="nb">INT</span><span class="p">,</span>
+    <span class="o">@</span><span class="n">argWithDefault</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">=</span> <span class="k">NULL</span>
+<span class="k">AS</span>
+<span class="k">BEGIN</span>
+    <span class="c1">-- Procedure body</span>
+<span class="k">END</span>
+<span class="k">GO</span>
+</pre></div>
+
+
 <h2 id="drop-procedure-if-exists">Drop Procedure if Exists</h2>
 <div class="codehilite"><pre><span></span><span class="k">IF</span> <span class="k">EXISTS</span>
 <span class="p">(</span>
@@ -435,7 +473,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../csharp/" title="C#" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../python/" title="Python" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -444,7 +482,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                C&#35;
+                Python
               </span>
             </div>
           </a>
