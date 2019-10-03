@@ -235,6 +235,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#check-if-index-exists" class="md-nav__link">
+    Check If Index Exists
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#create-procedure" class="md-nav__link">
     Create Procedure
   </a>
@@ -332,6 +339,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#check-if-index-exists" class="md-nav__link">
+    Check If Index Exists
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#create-procedure" class="md-nav__link">
     Create Procedure
   </a>
@@ -391,6 +405,14 @@
                 
                 
                 <h1 id="sql-server">SQL Server</h1>
+<h2 id="check-if-index-exists">Check If Index Exists</h2>
+<div class="codehilite"><pre><span></span><span class="k">IF</span> <span class="k">EXISTS</span> <span class="p">(</span><span class="k">SELECT</span> <span class="mi">1</span> <span class="k">FROM</span> <span class="n">sys</span><span class="p">.</span><span class="n">indexes</span> <span class="k">WHERE</span> <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;index_name&#39;</span> <span class="k">AND</span> <span class="n">object_id</span> <span class="o">=</span> <span class="n">OBJECT_ID</span><span class="p">(</span><span class="s1">&#39;table_name&#39;</span><span class="p">))</span>
+<span class="k">BEGIN</span>
+    <span class="c1">-- The index exists</span>
+<span class="k">END</span>
+</pre></div>
+
+
 <h2 id="create-procedure">Create Procedure</h2>
 <div class="codehilite"><pre><span></span><span class="k">CREATE</span> <span class="k">PROCEDURE</span> <span class="p">[</span><span class="k">schema</span><span class="p">].[</span><span class="k">procedure</span><span class="p">]</span>
     <span class="o">@</span><span class="n">arg</span> <span class="nb">INT</span><span class="p">,</span>
@@ -452,7 +474,7 @@
 
 
 <h2 id="set-nocount-on">SET NOCOUNT ON</h2>
-<p><code>SET NOCOUNTON</code> prevents the message from showing which contains the number of affected rows. Using this in a stored procedure can significantly improve its performance.</p>
+<p><code>SET NOCOUNT ON</code> prevents the message from showing which contains the number of affected rows. Using this in a stored procedure can significantly improve its performance.</p>
                 
                   
                 
