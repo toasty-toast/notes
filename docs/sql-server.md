@@ -67,4 +67,4 @@ WHEN NOT MATCHED BY TARGET THEN
 
 ## SET NOCOUNT ON
 
-`SET NOCOUNTON` prevents the message from showing which contains the number of affected rows. Using this in a stored procedure can significantly improve its performance.
+`SET NOCOUNT ON` prevents the message from showing which contains the number of affected rows. Using this in a stored procedure can significantly improve its performance.
