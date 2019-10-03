@@ -1,5 +1,14 @@
 # SQL Server
 
+## Check If Index Exists
+
+```SQL
+IF EXISTS (SELECT 1 FROM sys.indexes WHERE name = 'index_name' AND object_id = OBJECT_ID('table_name'))
+BEGIN
+    -- The index exists
+END
+```
+
 ## Create Procedure
 
 ```SQL
