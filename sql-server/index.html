@@ -235,6 +235,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#check-if-column-exists" class="md-nav__link">
+    Check If Column Exists
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#check-if-index-exists" class="md-nav__link">
     Check If Index Exists
   </a>
@@ -242,22 +249,22 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#check-if-procedure-exists" class="md-nav__link">
+    Check If Procedure Exists
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-if-table-exists" class="md-nav__link">
+    Check If Table Exists
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#create-procedure" class="md-nav__link">
     Create Procedure
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#drop-procedure-if-exists" class="md-nav__link">
-    Drop Procedure if Exists
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#drop-table-if-exists" class="md-nav__link">
-    Drop Table if Exists
   </a>
   
 </li>
@@ -339,6 +346,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#check-if-column-exists" class="md-nav__link">
+    Check If Column Exists
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#check-if-index-exists" class="md-nav__link">
     Check If Index Exists
   </a>
@@ -346,22 +360,22 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#check-if-procedure-exists" class="md-nav__link">
+    Check If Procedure Exists
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-if-table-exists" class="md-nav__link">
+    Check If Table Exists
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#create-procedure" class="md-nav__link">
     Create Procedure
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#drop-procedure-if-exists" class="md-nav__link">
-    Drop Procedure if Exists
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#drop-table-if-exists" class="md-nav__link">
-    Drop Table if Exists
   </a>
   
 </li>
@@ -405,10 +419,34 @@
                 
                 
                 <h1 id="sql-server">SQL Server</h1>
+<h2 id="check-if-column-exists">Check If Column Exists</h2>
+<div class="codehilite"><pre><span></span><span class="k">IF</span> <span class="k">EXISTS</span> <span class="p">(</span><span class="k">SELECT</span> <span class="mi">1</span> <span class="k">FROM</span> <span class="n">sys</span><span class="p">.</span><span class="n">columns</span> <span class="k">WHERE</span> <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;column&#39;</span> <span class="k">AND</span> <span class="n">object_id</span> <span class="o">=</span> <span class="n">OBJECT_ID</span><span class="p">(</span><span class="s1">&#39;schema.table&#39;</span><span class="p">))</span>
+<span class="k">BEGIN</span>
+    <span class="c1">-- The column exists</span>
+<span class="k">END</span>
+</pre></div>
+
+
 <h2 id="check-if-index-exists">Check If Index Exists</h2>
 <div class="codehilite"><pre><span></span><span class="k">IF</span> <span class="k">EXISTS</span> <span class="p">(</span><span class="k">SELECT</span> <span class="mi">1</span> <span class="k">FROM</span> <span class="n">sys</span><span class="p">.</span><span class="n">indexes</span> <span class="k">WHERE</span> <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;index_name&#39;</span> <span class="k">AND</span> <span class="n">object_id</span> <span class="o">=</span> <span class="n">OBJECT_ID</span><span class="p">(</span><span class="s1">&#39;table_name&#39;</span><span class="p">))</span>
 <span class="k">BEGIN</span>
     <span class="c1">-- The index exists</span>
+<span class="k">END</span>
+</pre></div>
+
+
+<h2 id="check-if-procedure-exists">Check If Procedure Exists</h2>
+<div class="codehilite"><pre><span></span><span class="k">IF</span> <span class="k">EXISTS</span> <span class="p">(</span><span class="k">SELECT</span> <span class="mi">1</span> <span class="k">FROM</span> <span class="n">sysobjects</span> <span class="k">WHERE</span> <span class="n">id</span> <span class="o">=</span> <span class="n">object_id</span><span class="p">(</span><span class="n">N</span><span class="s1">&#39;schema.proc&#39;</span><span class="p">)</span> <span class="k">AND</span> <span class="n">OBJECTPROPERTY</span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">N</span><span class="s1">&#39;IsProcedure&#39;</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+<span class="k">BEGIN</span>
+    <span class="c1">-- The procedure exists</span>
+<span class="k">END</span>
+</pre></div>
+
+
+<h2 id="check-if-table-exists">Check If Table Exists</h2>
+<div class="codehilite"><pre><span></span><span class="k">IF</span> <span class="k">EXISTS</span> <span class="p">(</span><span class="k">SELECT</span> <span class="mi">1</span> <span class="k">FROM</span> <span class="n">INFORMATION_SCHEMA</span><span class="p">.</span><span class="n">TABLES</span> <span class="k">WHERE</span> <span class="n">TABLE_SCHEMA</span> <span class="o">=</span> <span class="s1">&#39;schema&#39;</span> <span class="k">AND</span> <span class="k">TABLE_NAME</span> <span class="o">=</span> <span class="s1">&#39;table&#39;</span><span class="p">)</span>
+<span class="k">BEGIN</span>
+    <span class="c1">-- The table exists</span>
 <span class="k">END</span>
 </pre></div>
 
@@ -421,35 +459,6 @@
 <span class="k">BEGIN</span>
     <span class="c1">-- Procedure body</span>
 <span class="k">END</span>
-<span class="k">GO</span>
-</pre></div>
-
-
-<h2 id="drop-procedure-if-exists">Drop Procedure if Exists</h2>
-<div class="codehilite"><pre><span></span><span class="k">IF</span> <span class="k">EXISTS</span>
-<span class="p">(</span>
-    <span class="k">SELECT</span> <span class="mi">1</span>
-    <span class="k">FROM</span> <span class="n">sysobjects</span>
-    <span class="k">WHERE</span> <span class="n">id</span> <span class="o">=</span> <span class="n">object_id</span><span class="p">(</span><span class="n">N</span><span class="s1">&#39;[dbo].[proc]&#39;</span><span class="p">)</span> <span class="k">AND</span> <span class="n">OBJECTPROPERTY</span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">N</span><span class="s1">&#39;IsProcedure&#39;</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="p">)</span>
-<span class="k">BEGIN</span>
-    <span class="k">DROP</span> <span class="k">PROCEDURE</span> <span class="p">[</span><span class="n">dbo</span><span class="p">].[</span><span class="n">proc</span><span class="p">]</span>
-<span class="k">END</span>
-<span class="k">GO</span>
-</pre></div>
-
-
-<h2 id="drop-table-if-exists">Drop Table if Exists</h2>
-<div class="codehilite"><pre><span></span><span class="k">IF</span> <span class="k">EXISTS</span>
-<span class="p">(</span>
-    <span class="k">SELECT</span> <span class="mi">1</span>
-    <span class="k">FROM</span> <span class="n">INFORMATION_SCHEMA</span><span class="p">.</span><span class="n">TABLES</span>
-    <span class="k">WHERE</span> <span class="n">TABLE_SCHEMA</span> <span class="o">=</span> <span class="s1">&#39;&lt;schema&gt;&#39;</span> <span class="k">AND</span> <span class="k">TABLE_NAME</span> <span class="o">=</span> <span class="s1">&#39;&lt;table&gt;&#39;</span>
-<span class="p">)</span>
-<span class="k">BEGIN</span>
-    <span class="k">DROP</span> <span class="k">TABLE</span> <span class="p">[</span><span class="o">&lt;</span><span class="k">schema</span><span class="o">&gt;</span><span class="p">].[</span><span class="o">&lt;</span><span class="k">table</span><span class="o">&gt;</span><span class="p">]</span>
-<span class="k">END</span>
-<span class="k">GO</span>
 </pre></div>
 
 
