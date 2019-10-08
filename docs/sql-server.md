@@ -1,5 +1,15 @@
 # SQL Server
 
+## Check If Column Exists
+
+```SQL
+IF EXISTS (SELECT 1 FROM sys.columns WHERE name = 'column' AND object_id = OBJECT_ID('schema.table'))
+BEGIN
+    -- The column exists
+END
+GO
+```
+
 ## Check If Index Exists
 
 ```SQL
