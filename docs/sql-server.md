@@ -7,7 +7,6 @@ IF EXISTS (SELECT 1 FROM sys.columns WHERE name = 'column' AND object_id = OBJEC
 BEGIN
     -- The column exists
 END
-GO
 ```
 
 ## Check If Index Exists
@@ -16,6 +15,24 @@ GO
 IF EXISTS (SELECT 1 FROM sys.indexes WHERE name = 'index_name' AND object_id = OBJECT_ID('table_name'))
 BEGIN
     -- The index exists
+END
+```
+
+## Check If Procedure Exists
+
+```SQL
+IF EXISTS (SELECT 1 FROM sysobjects WHERE id = object_id(N'schema.proc') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+BEGIN
+    -- The procedure exists
+END
+```
+
+## Check If Table Exists
+
+```SQL
+IF EXISTS (SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'schema' AND TABLE_NAME = 'table')
+BEGIN
+    -- The table exists
 END
 ```
 
@@ -29,37 +46,6 @@ AS
 BEGIN
     -- Procedure body
 END
-GO
-```
-
-## Drop Procedure if Exists
-
-```SQL
-IF EXISTS
-(
-    SELECT 1
-    FROM sysobjects
-    WHERE id = object_id(N'[dbo].[proc]') AND OBJECTPROPERTY(id, N'IsProcedure') = 1
-)
-BEGIN
-	DROP PROCEDURE [dbo].[proc]
-END
-GO
-```
-
-## Drop Table if Exists
-
-```SQL
-IF EXISTS
-(
-    SELECT 1
-    FROM INFORMATION_SCHEMA.TABLES
-    WHERE TABLE_SCHEMA = '<schema>' AND TABLE_NAME = '<table>'
-)
-BEGIN
-	DROP TABLE [<schema>].[<table>]
-END
-GO
 ```
 
 ## Get All Database Triggers
