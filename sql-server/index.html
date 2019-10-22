@@ -270,6 +270,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#datetime-convert-styles" class="md-nav__link">
+    DATETIME CONVERT() Styles
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#get-all-database-triggers" class="md-nav__link">
     Get All Database Triggers
   </a>
@@ -381,6 +388,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#datetime-convert-styles" class="md-nav__link">
+    DATETIME CONVERT() Styles
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#get-all-database-triggers" class="md-nav__link">
     Get All Database Triggers
   </a>
@@ -462,6 +476,145 @@
 </pre></div>
 
 
+<h2 id="datetime-convert-styles">DATETIME CONVERT() Styles</h2>
+<table>
+<thead>
+<tr>
+<th>Without century</th>
+<th>With century</th>
+<th>Input/Output</th>
+<th>Standard</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>100</td>
+<td>mon dd yyyy hh:miAM/PM</td>
+<td>Default</td>
+</tr>
+<tr>
+<td>1</td>
+<td>101</td>
+<td>mm/dd/yyyy</td>
+<td>US</td>
+</tr>
+<tr>
+<td>2</td>
+<td>102</td>
+<td>yyyy.mm.dd</td>
+<td>ANSI</td>
+</tr>
+<tr>
+<td>3</td>
+<td>103</td>
+<td>dd/mm/yyyy</td>
+<td>British/French</td>
+</tr>
+<tr>
+<td>4</td>
+<td>104</td>
+<td>dd.mm.yyyy</td>
+<td>German</td>
+</tr>
+<tr>
+<td>5</td>
+<td>105</td>
+<td>dd-mm-yyyy</td>
+<td>Italian</td>
+</tr>
+<tr>
+<td>6</td>
+<td>106</td>
+<td>dd mon yyyy</td>
+<td>-</td>
+</tr>
+<tr>
+<td>7</td>
+<td>107</td>
+<td>Mon dd, yyyy</td>
+<td>-</td>
+</tr>
+<tr>
+<td>8</td>
+<td>108</td>
+<td>hh:mm:ss</td>
+<td>-</td>
+</tr>
+<tr>
+<td>9</td>
+<td>109</td>
+<td>mon dd yyyy hh:mi:ss:mmmAM (or PM)</td>
+<td>Default + millisec</td>
+</tr>
+<tr>
+<td>10</td>
+<td>110</td>
+<td>mm-dd-yyyy</td>
+<td>USA</td>
+</tr>
+<tr>
+<td>11</td>
+<td>111</td>
+<td>yyyy/mm/dd</td>
+<td>Japan</td>
+</tr>
+<tr>
+<td>12</td>
+<td>112</td>
+<td>yyyymmdd</td>
+<td>ISO</td>
+</tr>
+<tr>
+<td>13</td>
+<td>113</td>
+<td>dd mon yyyy hh:mi:ss:mmm</td>
+<td>Europe (24 hour clock)&gt;</td>
+</tr>
+<tr>
+<td>14</td>
+<td>114</td>
+<td>hh:mi:ss:mmm</td>
+<td>24 hour clock</td>
+</tr>
+<tr>
+<td>20</td>
+<td>120</td>
+<td>yyyy-mm-dd hh:mi:ss</td>
+<td>ODBC canonical (24 hour clock)</td>
+</tr>
+<tr>
+<td>21</td>
+<td>121</td>
+<td>yyyy-mm-dd hh:mi:ss.mmm</td>
+<td>ODBC canonical (24 hour clock)</td>
+</tr>
+<tr>
+<td></td>
+<td>126</td>
+<td>yyyy-mm-ddThh:mi:ss.mmm</td>
+<td>ISO8601</td>
+</tr>
+<tr>
+<td></td>
+<td>127</td>
+<td>yyyy-mm-ddThh:mi:ss.mmmZ</td>
+<td>ISO8601 (with time zone Z)</td>
+</tr>
+<tr>
+<td></td>
+<td>130</td>
+<td>dd mon yyyy hh:mi:ss:mmmAM</td>
+<td>Hijiri</td>
+</tr>
+<tr>
+<td></td>
+<td>131</td>
+<td>dd/mm/yy hh:mi:ss:mmmAM</td>
+<td>Hijiri</td>
+</tr>
+</tbody>
+</table>
 <h2 id="get-all-database-triggers">Get All Database Triggers</h2>
 <div class="codehilite"><pre><span></span><span class="k">SELECT</span> <span class="n">TAB</span><span class="p">.</span><span class="n">name</span> <span class="k">as</span> <span class="n">TableName</span><span class="p">,</span> <span class="n">TRIG</span><span class="p">.</span><span class="n">name</span> <span class="k">as</span> <span class="n">TriggerName</span><span class="p">,</span> <span class="n">TRIG</span><span class="p">.</span><span class="n">is_disabled</span> <span class="k">AS</span> <span class="n">IsDisabled</span>
 <span class="k">FROM</span> <span class="n">sys</span><span class="p">.</span><span class="n">triggers</span> <span class="k">AS</span> <span class="n">TRIG</span>
