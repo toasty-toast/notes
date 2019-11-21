@@ -229,6 +229,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#useful-aliases" class="md-nav__link">
+    Useful Aliases
+  </a>
+  
+</li>
+      
       
       
       
@@ -315,6 +322,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#useful-aliases" class="md-nav__link">
+    Useful Aliases
+  </a>
+  
+</li>
+      
       
       
       
@@ -351,6 +365,16 @@ $ git tag -d tag1
 
 <span class="c1"># Delete remote tag</span>
 $ git push origin :tag1
+</pre></div>
+
+
+<h2 id="useful-aliases">Useful Aliases</h2>
+<div class="codehilite"><pre><span></span><span class="c1"># In ~/.gitconfig</span>
+<span class="k">[alias]</span>
+    <span class="na">branch-name</span> <span class="o">=</span> <span class="s">&quot;!git rev-parse --abbrev-ref HEAD&quot;</span>
+<span class="s">    publish = &quot;!git push -u origin $(git branch-name)&quot;</span>
+<span class="s">    unpublish = &quot;!git push origin :$(git branch-name)&quot;</span>
+<span class="s">    unstage = &quot;reset HEAD&quot;</span>
 </pre></div>
                 
                   
