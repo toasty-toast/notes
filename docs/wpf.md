@@ -18,6 +18,7 @@ public ICollectionView MyCollectionView
 ## Remove Toolbar Grip and Overflow
 
 XAML
+
 ```WPF
 <ToolBarPanel DockPanel.Dock="Top">
     <ToolBar ToolBarTray.IsLocked="True" Loaded="ToolBar_Loaded">
@@ -29,6 +30,7 @@ XAML
 ```
 
 Code behind
+
 ```C#
 private void ToolBar_Loaded(object sender, RoutedEventArgs e)
 {
