@@ -239,33 +239,6 @@
     Virtual Environment
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#install-virtualenv" class="md-nav__link">
-    Install virtualenv
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#create-a-new-virtual-environment" class="md-nav__link">
-    Create a New Virtual Environment
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#installing-packages" class="md-nav__link">
-    Installing Packages
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
       
@@ -340,33 +313,6 @@
     Virtual Environment
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#install-virtualenv" class="md-nav__link">
-    Install virtualenv
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#create-a-new-virtual-environment" class="md-nav__link">
-    Create a New Virtual Environment
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#installing-packages" class="md-nav__link">
-    Installing Packages
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
       
@@ -388,17 +334,11 @@
                 
                 <h1 id="python">Python</h1>
 <h2 id="virtual-environment">Virtual Environment</h2>
-<h3 id="install-virtualenv">Install virtualenv</h3>
-<div class="codehilite"><pre><span></span><span class="c1"># Upgrade pip</span>
+<div class="codehilite"><pre><span></span><span class="c1"># install virtualenv</span>
 $ pip install --upgrade pip
-
-<span class="c1"># Install virtualenv</span>
 $ pip install --user virtualenv
-</pre></div>
 
-
-<h3 id="create-a-new-virtual-environment">Create a New Virtual Environment</h3>
-<div class="codehilite"><pre><span></span><span class="c1"># Create a new virtual environment</span>
+<span class="c1"># Create a new virtual environment</span>
 $ python -m venv env
 
 <span class="c1"># Activate the virtual environment</span>
@@ -406,15 +346,12 @@ $ <span class="nb">source</span> env/Scripts/activate
 
 <span class="c1"># Deactivate the virtual environment</span>
 $ deactivate
-</pre></div>
-
-
-<h3 id="installing-packages">Installing Packages</h3>
-<div class="codehilite"><pre><span></span><span class="c1"># Install packages from requirements.txt</span>
-$ pip install -r requirements.txt
 
 <span class="c1"># Save installed packages to requirements.txt</span>
 $ pip freeze &gt; requirements.txt
+
+<span class="c1"># Install packages from requirements.txt</span>
+$ pip install -r requirements.txt
 </pre></div>
                 
                   
