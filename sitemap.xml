@@ -2,32 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://toasty-toast.github.io/bag-of-tricks/</loc>
-     <lastmod>2019-10-22</lastmod>
+     <lastmod>2019-11-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://toasty-toast.github.io/bag-of-tricks/csharp/</loc>
-     <lastmod>2019-10-22</lastmod>
+     <lastmod>2019-11-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://toasty-toast.github.io/bag-of-tricks/git/</loc>
+     <lastmod>2019-11-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://toasty-toast.github.io/bag-of-tricks/python/</loc>
-     <lastmod>2019-10-22</lastmod>
+     <lastmod>2019-11-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://toasty-toast.github.io/bag-of-tricks/sql-server/</loc>
-     <lastmod>2019-10-22</lastmod>
+     <lastmod>2019-11-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://toasty-toast.github.io/bag-of-tricks/windows/</loc>
-     <lastmod>2019-10-22</lastmod>
+     <lastmod>2019-11-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://toasty-toast.github.io/bag-of-tricks/wpf/</loc>
-     <lastmod>2019-10-22</lastmod>
+     <lastmod>2019-11-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
