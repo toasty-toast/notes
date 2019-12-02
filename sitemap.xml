@@ -11,6 +11,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://toasty-toast.github.io/bag-of-tricks/docker/</loc>
+     <lastmod>2019-12-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://toasty-toast.github.io/bag-of-tricks/git/</loc>
      <lastmod>2019-12-02</lastmod>
      <changefreq>daily</changefreq>
