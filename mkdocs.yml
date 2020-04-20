@@ -1,5 +1,5 @@
-site_name: Bag of Tricks
-site_url: https://toasty-toast.github.io/bag-of-tricks
+site_name: Notes
+site_url: https://toasty-toast.github.io/notes
 markdown_extensions:
         - toc:
                 baselevel: 1
