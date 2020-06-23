@@ -2,52 +2,57 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://toasty-toast.github.io/notes/</loc>
-     <lastmod>2020-04-20</lastmod>
+     <lastmod>2020-06-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://toasty-toast.github.io/notes/linux/networking/</loc>
+     <lastmod>2020-06-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://toasty-toast.github.io/notes/productivity/blocking-sites/</loc>
-     <lastmod>2020-04-20</lastmod>
+     <lastmod>2020-06-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://toasty-toast.github.io/notes/software/csharp/</loc>
-     <lastmod>2020-04-20</lastmod>
+     <lastmod>2020-06-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://toasty-toast.github.io/notes/software/docker/</loc>
-     <lastmod>2020-04-20</lastmod>
+     <lastmod>2020-06-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://toasty-toast.github.io/notes/software/git/</loc>
-     <lastmod>2020-04-20</lastmod>
+     <lastmod>2020-06-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://toasty-toast.github.io/notes/software/markdown/</loc>
-     <lastmod>2020-04-20</lastmod>
+     <lastmod>2020-06-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://toasty-toast.github.io/notes/software/python/</loc>
-     <lastmod>2020-04-20</lastmod>
+     <lastmod>2020-06-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://toasty-toast.github.io/notes/software/sql-server/</loc>
-     <lastmod>2020-04-20</lastmod>
+     <lastmod>2020-06-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://toasty-toast.github.io/notes/software/windows/</loc>
-     <lastmod>2020-04-20</lastmod>
+     <lastmod>2020-06-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://toasty-toast.github.io/notes/software/wpf/</loc>
-     <lastmod>2020-04-20</lastmod>
+     <lastmod>2020-06-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
