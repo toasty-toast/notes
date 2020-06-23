@@ -2,7 +2,14 @@ site_name: Notes
 site_url: https://toasty-toast.github.io/notes
 markdown_extensions:
         - toc:
-                baselevel: 1
+                  baselevel: 1
         - codehilite
 theme:
-        name: 'material'
+        name: "material"
+plugins:
+        - search
+        - minify:
+                  minify_html: true
+                  minify_js: true
+                  htmlmin_opts:
+                          remove_comments: true
