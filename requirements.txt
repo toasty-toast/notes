@@ -17,7 +17,7 @@ nltk==3.5
 pep562==1.0
 Pygments==2.6.1
 pymdown-extensions==7.1
-PyYAML==5.3.1
+PyYAML==5.4
 regex==2020.6.8
 six==1.15.0
 tornado==6.0.4
